@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Empreendendo no Lar</string>
+    <string name="app_recipes">Receitas</string>
+    <string name="app_ingredients">Ingredientes</string>
+</resources>
