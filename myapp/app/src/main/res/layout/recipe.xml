@@ -3,8 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="AppThemeNo"
-    >
+   >
 
     <ImageView
         android:id="@+id/recipe_photo"
@@ -17,9 +16,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/recipe_photo"
-
-        >
+        android:layout_below="@id/recipe_photo"        >
         <LinearLayout
             android:id="@+id/r_info"
             android:layout_width="match_parent"

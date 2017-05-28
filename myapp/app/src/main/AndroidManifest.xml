@@ -10,13 +10,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppThemes">
-        <activity android:name=".Home">
+        <activity android:name= ".Home">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name= "android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name= "android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Ingredients"></activity>
+        <activity android:name=".Recipes"></activity>
     </application>
 
 </manifest>

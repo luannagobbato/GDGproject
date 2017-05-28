@@ -8,15 +8,9 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/tb_recipes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?android:attr/colorPrimary"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/colorPrimary" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/btn_float"
@@ -30,11 +24,10 @@
             app:srcCompat="@color/colorAccent" />
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycler_view"
+            android:id="@+id/rv_recipes"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbars="vertical"
-            android:layout_below="@id/tb_recipes"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true">

@@ -2,4 +2,9 @@
     <string name="app_name">Empreendendo no Lar</string>
     <string name="app_recipes">Receitas</string>
     <string name="app_ingredients">Ingredientes</string>
+    <string name="name_ingredient">Nome do ingrediente</string>
+    <string name="quantity">Quantidade</string>
+    <string name="price">Preço</string>
+    <string name="name_recipe">Nome da Receita</string>
+    <string name="prepare_method">Modo de preparo</string>
 </resources>
