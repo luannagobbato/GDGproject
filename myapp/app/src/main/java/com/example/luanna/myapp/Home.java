@@ -12,9 +12,9 @@ import static com.example.luanna.myapp.R.layout.activity_recipes;
 
 public class Home extends AppCompatActivity {
     private ImageButton btnRecipes;
-//    private ImageButton btnIngredients;
+//  private ImageButton btnIngredients;
 
-        @Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
@@ -23,33 +23,30 @@ public class Home extends AppCompatActivity {
         setActions();
     }
 
-    private void findViews(){
-       btnRecipes = (ImageButton) findViewById(R.id.btn_recipes);
-//       btnIngredients = (ImageButton) findViewById(R.id.btn_ingredients);
-       }
-    private void setActions(){
+    private void findViews() {
+        btnRecipes = (ImageButton) findViewById(R.id.btn_recipes);
+//      btnIngredients = (ImageButton) findViewById(R.id.btn_ingredients);
+    }
+
+    private void setActions() {
         btnRecipes.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 goToRecipes();
-            }
+            });
+        }
+    }
+
 //        btnIngredients.setOnClickListener(new View.OnClickListener() {
-//            @Override
+//
 //             public void onClick(View v){
 //                    goToIngredients();
 //                }
-//            })
-        });
-    }
-    private void goToRecipes() {
+//            });
 
+
+    private void goToRecipes() {
         Intent intent = new Intent(Home.this, Recipes.class);
         startActivity(intent);
     }
-
-//    private void goToIngredients(){
-//
-//        Intent intent new Intent(Home.this, Ingredients.class);
-//        startActivity(intent);
-//    }
 }

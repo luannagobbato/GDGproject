@@ -12,17 +12,23 @@
         android:layout_height="match_parent"
         android:layout_margin="8dp">
 
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:elevation="8dp"
+            app:titleTextColor="@color/colorWhite" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/btn_add_ingredient"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:layout_margin="16dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             app:fabSize="normal"
-            app:srcCompat="@color/colorAccent" />
+            app:useCompatPadding="true" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_ingredients"
