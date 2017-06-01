@@ -2,10 +2,12 @@ package com.example.luanna.myapp.models;
 
 import com.example.luanna.myapp.utils.Cons;
 import com.example.luanna.myapp.adapters.IngredientsAdapter;
+import com.example.luanna.myapp.R;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
@@ -16,36 +18,40 @@ import java.util.List;
 /**
  * Created by Luanna on 27/05/2017.
  */
-// extends AppCompatActivity implements IngredientsAdapter.ItemClickListener
-public class Ingredient{
-    IngredientsAdapter adapter;
+
+public class Ingredient extends AppCompatActivity {
     private String name;
     private Integer quantity;
     private Double price;
-
-    public Ingredient(){
-    }
 
     public Ingredient(String name, Integer quantity, Double price){
         this.name = name;
         this.quantity= quantity;
         this.price= price;
     }
-//
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_ingredients);
-//
-//        // data que ira popular as recyclers
-//        List<Ingredient> ingredients = Cons.getIngredients();
-//
-//        // setup da RecyclerView
-//        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rvNumbers);
-//        int numberOfColumns = 6;
-//        recyclerView.setLayoutManager(new GridLayoutManager(this, numberOfColumns));
-//        adapter = new IngredientsAdapter(this, ingredients);
-//        adapter.setClickListener(this);
-//        recyclerView.setAdapter(adapter);
-//    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
 
 }

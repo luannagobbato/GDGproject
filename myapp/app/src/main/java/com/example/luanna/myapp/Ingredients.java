@@ -7,6 +7,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
@@ -29,7 +30,7 @@ import java.util.List;
 public class Ingredients extends AppCompatActivity {
     private RecyclerView rvIngredients;
     private Toolbar toolbar;
-   // private FloatingActionButton addIngredient;
+    private FloatingActionButton addIngredient;
     private List<Ingredient> ingredients;
 
     @Override
@@ -43,11 +44,13 @@ public class Ingredients extends AppCompatActivity {
         setRecyclerView();
     }
 
+
+
     private void findViews(){
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         rvIngredients = (RecyclerView) findViewById(R.id.rv_ingredients);
-     //   addIngredient = (FloatingActionButton) findViewById(R.id.btn_add_ingredient);
-    }
+        addIngredient = (FloatingActionButton) findViewById(R.id.btn_add_ingredient);
+       }
 
     private void setToolbar() {
         toolbar.setTitle(getString(R.string.app_ingredients));
@@ -56,12 +59,11 @@ public class Ingredients extends AppCompatActivity {
 
     private void setRecyclerView(){
         rvIngredients.setHasFixedSize(true);
-        StaggeredGridLayoutManager mLayoutManager = new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
-        rvIngredients.setLayoutManager(mLayoutManager);
+        RecyclerView.LayoutManager mLayout = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        rvIngredients.setLayoutManager(mLayout);
 
-        IngredientsAdapter ingredientsAdapter = new IngredientsAdapter(ingredients, ingredients.this);
+        IngredientsAdapter ingredientsAdapter = new IngredientsAdapter(this, ingredients);
 
         rvIngredients.setAdapter(ingredientsAdapter);
-        rvIngredients.setItemAnimator(new DefaultItemAnimator());
     }
 }
