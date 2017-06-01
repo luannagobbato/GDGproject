@@ -1,21 +1,13 @@
 package com.example.luanna.myapp;
 
-import android.app.ActivityOptions;
-import android.content.Intent;
+import com.example.luanna.myapp.R;
 import android.os.Build;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
-import android.transition.Explode;
-import android.view.View;
-import android.widget.ImageView;
-
-import android.app.ActivityOptions;
 
 import com.example.luanna.myapp.adapters.IngredientsAdapter;
 import com.example.luanna.myapp.models.Ingredient;
@@ -43,8 +35,6 @@ public class Ingredients extends AppCompatActivity {
         setToolbar();
         setRecyclerView();
     }
-
-
 
     private void findViews(){
         toolbar = (Toolbar) findViewById(R.id.toolbar);

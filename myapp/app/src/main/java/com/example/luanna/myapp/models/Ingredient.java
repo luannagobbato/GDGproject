@@ -1,19 +1,6 @@
 package com.example.luanna.myapp.models;
 
-import com.example.luanna.myapp.utils.Cons;
-import com.example.luanna.myapp.adapters.IngredientsAdapter;
-import com.example.luanna.myapp.R;
-
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.view.View;
-import android.widget.Toast;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Luanna on 27/05/2017.
