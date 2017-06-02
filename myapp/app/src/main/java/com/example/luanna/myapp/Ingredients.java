@@ -1,7 +1,5 @@
 package com.example.luanna.myapp;
 
-import com.example.luanna.myapp.R;
-import android.os.Build;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,7 +19,7 @@ import java.util.List;
 
 public class Ingredients extends AppCompatActivity {
     private RecyclerView rvIngredients;
-    private Toolbar toolbar;
+//    private Toolbar toolbar;
     private FloatingActionButton addIngredient;
     private List<Ingredient> ingredients;
 
@@ -32,27 +30,28 @@ public class Ingredients extends AppCompatActivity {
 
         ingredients = Cons.getIngredients();
         findViews();
-        setToolbar();
+//        setToolbar();
         setRecyclerView();
     }
 
     private void findViews(){
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        toolbar = (Toolbar) findViewById(R.id.toolbar);
         rvIngredients = (RecyclerView) findViewById(R.id.rv_ingredients);
         addIngredient = (FloatingActionButton) findViewById(R.id.btn_add_ingredient);
        }
 
-    private void setToolbar() {
-        toolbar.setTitle(getString(R.string.app_ingredients));
-        setSupportActionBar(toolbar);
-    }
+//    private void setToolbar() {
+//        setSupportActionBar(toolbar);
+//    }
+
 
     private void setRecyclerView(){
         rvIngredients.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayout = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvIngredients.setLayoutManager(mLayout);
 
-        IngredientsAdapter ingredientsAdapter = new IngredientsAdapter(this, ingredients);
+        // Pega a lista de dados, e coloca para tela
+        IngredientsAdapter ingredientsAdapter = new IngredientsAdapter(ingredients, Ingredients.this);
 
         rvIngredients.setAdapter(ingredientsAdapter);
     }

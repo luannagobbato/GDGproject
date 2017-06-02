@@ -9,11 +9,8 @@ public class Recipe implements Serializable {
 
     private String urlPhoto;
     private String name;
-    private String prepare_method;
-    private Integer portions;
 
     public Recipe() {
-
     }
 
     public Recipe(String urlPhoto, String name) {
@@ -21,7 +18,7 @@ public class Recipe implements Serializable {
         this.name = name;
     }
 
-    public String getUrlCover() {
+    public String getUrlPhoto() {
         return urlPhoto;
     }
 
