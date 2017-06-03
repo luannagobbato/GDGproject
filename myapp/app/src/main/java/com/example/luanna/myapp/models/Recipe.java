@@ -1,29 +1,33 @@
 package com.example.luanna.myapp.models;
 
 import java.io.Serializable;
+import java.util.List;
+
 /**
  * Created by Luanna on 24/05/2017.
  */
 
-public class Recipe implements Serializable {
+public class Recipe {
 
-    private String urlPhoto;
+    //private String urlPhoto;
     private String name;
+    private String pepareMethod;
+    private String time;
+    private Double profit;
+    private Integer portion;
+    private List<RecipeIngredient> recipeIngredients;
+
+
+    public Recipe(String name, String pepareMethod, String time, Double profit, Integer portion, List<RecipeIngredient> recipeIngredients) {
+        this.name = name;
+        this.pepareMethod = pepareMethod;
+        this.time = time;
+        this.profit = profit;
+        this.portion = portion;
+        this.recipeIngredients = recipeIngredients;
+    }
 
     public Recipe() {
-    }
-
-    public Recipe(String urlPhoto, String name) {
-        this.urlPhoto = urlPhoto;
-        this.name = name;
-    }
-
-    public String getUrlPhoto() {
-        return urlPhoto;
-    }
-
-    public void setUrlPhoto(String urlPhoto) {
-        this.urlPhoto = urlPhoto;
     }
 
     public String getName() {
@@ -34,11 +38,44 @@ public class Recipe implements Serializable {
         this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return "Recipe{" +
-                "urlPhoto='" + urlPhoto + '\'' +
-                " name='" + name + '\'' +
-                '}';
+    public String getPepareMethod() {
+        return pepareMethod;
     }
+
+    public void setPepareMethod(String pepareMethod) {
+        this.pepareMethod = pepareMethod;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public Double getProfit() {
+        return profit;
+    }
+
+    public void setProfit(Double profit) {
+        this.profit = profit;
+    }
+
+    public Integer getPortion() {
+        return portion;
+    }
+
+    public void setPortion(Integer portion) {
+        this.portion = portion;
+    }
+
+    public List<RecipeIngredient> getRecipeIngredients() {
+        return recipeIngredients;
+    }
+
+    public void setRecipeIngredients(List<RecipeIngredient> recipeIngredients) {
+        this.recipeIngredients = recipeIngredients;
+    }
+
 }
