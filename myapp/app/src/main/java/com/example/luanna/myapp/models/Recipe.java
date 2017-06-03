@@ -17,16 +17,16 @@ public class Recipe {
     private Integer portion;
     private List<RecipeIngredient> recipeIngredients;
 
-    public Recipe(String name, String pepareMethod, String time, Double profit, Integer portion, List<RecipeIngredient> recipeIngredients) {
+    public Recipe(String name, String pepareMethod, String time, Integer portion, List<RecipeIngredient> recipeIngredients) {
         this.name = name;
         this.pepareMethod = pepareMethod;
         this.time = time;
-        this.profit = profit;
         this.priceSell = 3.50;
         this.portion = portion;
         this.recipeIngredients = recipeIngredients;
         this.revenue = getRevenue();
         this.netProfit = getNetProfit();
+        this.profit = getProfit();
     }
 
     public Recipe() {
@@ -61,6 +61,10 @@ public class Recipe {
         this.priceSell = priceSell;
     }
 
+    public Double getProfit() {
+        return (revenue / netProfit - 1) * 100;
+    }
+
     public String getName() {
         return name;
     }
@@ -83,10 +87,6 @@ public class Recipe {
 
     public void setTime(String time) {
         this.time = time;
-    }
-
-    public Double getProfit() {
-        return profit;
     }
 
     public void setProfit(Double profit) {

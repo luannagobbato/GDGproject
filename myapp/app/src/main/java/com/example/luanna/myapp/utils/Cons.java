@@ -32,10 +32,10 @@ public class Cons {
         recipe4.add(recipeIngredients.get(6));
         recipe4.add(recipeIngredients.get(7));
 
-        recipes.add(new Recipe("Bombom de Paçoca", example, "150min", 15.00, 10, recipe1));
-        recipes.add(new Recipe("Bolo de Cenoura", example, "130min", 70.00, 20, recipe2));
-        recipes.add(new Recipe("Pudim de Leite", example, "100min", 20.00, 30, recipe3));
-        recipes.add(new Recipe("Torta de Requeijão", example, "90min", 15.00, 40, recipe4));
+        recipes.add(new Recipe("Bombom de Paçoca", example, "150min", 10, recipe1));
+        recipes.add(new Recipe("Bolo de Cenoura", example, "130min", 20, recipe2));
+        recipes.add(new Recipe("Pudim de Leite", example, "100min", 30, recipe3));
+        recipes.add(new Recipe("Torta de Requeijão", example, "90min", 40, recipe4));
 
 //        recipes.add(new Recipe("http://is5.mzstatic.com/image/thumb/Music122/v4/50/89/c3/5089c3f8-ed7c-cdeb-fe3b-2931deee3a98/source/1200x630bb.jpg", "Bombom De Paçoquita"));
 //        recipes.add(new Recipe("https://images.genius.com/79a2201c67a9aa386cda76562666c62d.500x500x1.jpg", "Bolo de Chocolate"));
@@ -53,11 +53,11 @@ public class Cons {
     public static List<Ingredient> getIngredients(){
         List<Ingredient> ingredients = new ArrayList<>();
 
-        ingredients.add(new Ingredient("Chocolate", 1000, 15.00));
-        ingredients.add(new Ingredient("Leite condensado", 1000, 16.00));
+        ingredients.add(new Ingredient("Chocolate", 1000, 30.00));
+        ingredients.add(new Ingredient("Leite condensado", 395, 2.00));
         ingredients.add(new Ingredient("Leite", 1000, 2.00));
         ingredients.add(new Ingredient("Ovos", 30, 10.00));
-        ingredients.add(new Ingredient("Manteiga", 150, 5.00));
+        ingredients.add(new Ingredient("Manteiga", 150, 4.00));
 
         return ingredients;
     }
@@ -66,14 +66,14 @@ public class Cons {
         List<RecipeIngredient> recipeIngredients = new ArrayList<>();
         List<Ingredient> ingredients = Cons.getIngredients();
 
-        recipeIngredients.add(new RecipeIngredient(ingredients.get(0),200));
-        recipeIngredients.add(new RecipeIngredient(ingredients.get(0),300));
-        recipeIngredients.add(new RecipeIngredient(ingredients.get(1),600));
+        recipeIngredients.add(new RecipeIngredient(ingredients.get(0),350));
+        recipeIngredients.add(new RecipeIngredient(ingredients.get(0),400));
+        recipeIngredients.add(new RecipeIngredient(ingredients.get(1),395));
         recipeIngredients.add(new RecipeIngredient(ingredients.get(2),300));
-        recipeIngredients.add(new RecipeIngredient(ingredients.get(3),222));
-        recipeIngredients.add(new RecipeIngredient(ingredients.get(3),600));
-        recipeIngredients.add(new RecipeIngredient(ingredients.get(4),300));
-        recipeIngredients.add(new RecipeIngredient(ingredients.get(4),222));
+        recipeIngredients.add(new RecipeIngredient(ingredients.get(3),2));
+        recipeIngredients.add(new RecipeIngredient(ingredients.get(3),3));
+        recipeIngredients.add(new RecipeIngredient(ingredients.get(4),100));
+        recipeIngredients.add(new RecipeIngredient(ingredients.get(4),50));
 
         return recipeIngredients;
     }

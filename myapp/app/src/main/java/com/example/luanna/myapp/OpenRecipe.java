@@ -56,10 +56,10 @@ public class OpenRecipe extends AppCompatActivity {
     public void setInfo(Recipe recipe) {
         name.setText(recipe.getName());
         portion.setText(String.valueOf(recipe.getPortion()));
-        profit.setText(String.valueOf(recipe.getProfit()));
-        priceSell.setText(String.valueOf(recipe.getPriceSell()));
-        revenue.setText(String.valueOf(recipe.getRevenue()));
-        netProfit.setText(String.valueOf(recipe.getNetProfit()));
+        profit.setText(String.format("%.2f",recipe.getProfit()) + "%");
+        priceSell.setText("R$" + String.format("%.2f",recipe.getPriceSell()));
+        revenue.setText("R$" + String.format("%.2f", recipe.getRevenue()));
+        netProfit.setText("R$" + String.format("%.2f", recipe.getNetProfit()));
         time.setText(recipe.getTime());
     }
 
