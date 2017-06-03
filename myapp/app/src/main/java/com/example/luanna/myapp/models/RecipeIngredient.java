@@ -7,23 +7,23 @@ import java.util.List;
 
 public class RecipeIngredient {
 
-    private Ingredient recipeIngredients;
+    private Ingredient recipeIngredient;
     private Integer ingredientQuantity;
 
-    public RecipeIngredient(Ingredient recipeIngredients, Integer ingredientQuantity) {
-        this.recipeIngredients = recipeIngredients;
+    public RecipeIngredient(Ingredient recipeIngredient, Integer ingredientQuantity) {
+        this.recipeIngredient = recipeIngredient;
         this.ingredientQuantity = ingredientQuantity;
     }
 
     public RecipeIngredient() {
     }
 
-    public Ingredient getRecipeIngredients() {
-        return recipeIngredients;
+    public Ingredient getRecipeIngredient() {
+        return recipeIngredient;
     }
 
-    public void setRecipeIngredients(Ingredient recipeIngredients) {
-        this.recipeIngredients = recipeIngredients;
+    public void setRecipeIngredient(Ingredient recipeIngredients) {
+        this.recipeIngredient = recipeIngredients;
     }
 
     public Integer getIngredientQuantity() {
@@ -32,6 +32,10 @@ public class RecipeIngredient {
 
     public void setIngredientQuantity(Integer ingredientQuantity) {
         this.ingredientQuantity = ingredientQuantity;
+    }
+
+    public String getNameIngredient(){
+        return this.getRecipeIngredient().getName();
     }
 
 }
