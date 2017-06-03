@@ -19,6 +19,7 @@
         </activity>
         <activity android:name=".Ingredients"></activity>
         <activity android:name=".Recipes"></activity>
+        <activity android:name=".OpenRecipe"></activity>
 
     </application>
 

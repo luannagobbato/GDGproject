@@ -1,19 +1,17 @@
 package com.example.luanna.myapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
-import com.example.luanna.myapp.R;
 import com.example.luanna.myapp.models.Recipe;
 import com.example.luanna.myapp.utils.Cons;
 
-import org.w3c.dom.Text;
-
 import java.util.List;
 
-/**
- * Created by Luanna on 02/06/2017.
- */
+//
+//Ceated by Luanna on 25/05/2017.
+
 
 
 public class OpenRecipe extends AppCompatActivity {
@@ -24,10 +22,12 @@ public class OpenRecipe extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_open_recipe);
         List<Recipe> recipes = Cons.getRecipes();
-//        Recipe recipe = (Recipe) getIntent().getBundleExtra("extra").getSerializable("recipe");
+
+        Integer aux = getIntent().getIntExtra("position", -1);
+        
         findViews();
-        setInfo(recipes.get(0));
-//        validateTransitions(photo);
+        setInfo(recipes.get(aux));
+
     }
 
     public void findViews(){
