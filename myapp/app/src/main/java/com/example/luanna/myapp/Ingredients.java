@@ -13,14 +13,11 @@ import com.example.luanna.myapp.utils.Cons;
 
 import java.util.List;
 
-/**
- * Created by Luanna on 24/05/2017.
- */
-
+//Created by Luanna on 24/05/2017.
+ 
 public class Ingredients extends AppCompatActivity {
+
     private RecyclerView rvIngredients;
-//    private Toolbar toolbar;
-    private FloatingActionButton addIngredient;
     private List<Ingredient> ingredients;
 
     @Override
@@ -28,11 +25,13 @@ public class Ingredients extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ingredients);
 
+        //variável para armazenar os ingredientes da lista
         ingredients = Cons.getIngredients();
         findViews();
         setRecyclerView();
     }
 
+    //ligando o recyclerview ao id
     private void findViews(){
         rvIngredients = (RecyclerView) findViewById(R.id.rv_ingredients);
        }
@@ -40,6 +39,9 @@ public class Ingredients extends AppCompatActivity {
 
     private void setRecyclerView(){
         rvIngredients.setHasFixedSize(true);
+
+        //define o estilo do reclycler utilizado
+        // a forma como os itens serão mostrados
         RecyclerView.LayoutManager mLayout = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvIngredients.setLayoutManager(mLayout);
 

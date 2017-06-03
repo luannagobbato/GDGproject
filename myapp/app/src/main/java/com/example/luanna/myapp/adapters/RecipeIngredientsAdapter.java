@@ -16,14 +16,17 @@ import com.example.luanna.myapp.models.RecipeIngredient;
 import java.util.List;
 
 public class RecipeIngredientsAdapter extends RecyclerView.Adapter<RecipeIngredientsAdapter.ViewHolder> {
+
     private List<RecipeIngredient> recipeIngredients;
     private Context context;
 
+    //construtor
     public RecipeIngredientsAdapter(List<RecipeIngredient> data, Context context) {
         this.recipeIngredients = data;
         this.context = context;
     }
-
+    
+    //função liga os objetos com as views no xml    
     static class ViewHolder extends RecyclerView.ViewHolder {
         TextView nameIngredient, quantityIngredient;
 
@@ -40,6 +43,7 @@ public class RecipeIngredientsAdapter extends RecyclerView.Adapter<RecipeIngredi
         return new ViewHolder(view);
     }
 
+    //define o conteúdo das view que será mostrado
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         RecipeIngredient batgirl = recipeIngredients.get(position);
@@ -47,6 +51,7 @@ public class RecipeIngredientsAdapter extends RecyclerView.Adapter<RecipeIngredi
         holder.quantityIngredient.setText(String.valueOf(batgirl.getIngredientQuantity()));
     }
 
+    //busca a quantidade de itens que serão mostrados
     @Override
     public int getItemCount() {
         return recipeIngredients.size();

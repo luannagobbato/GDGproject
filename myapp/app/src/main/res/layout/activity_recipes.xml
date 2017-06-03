@@ -8,21 +8,21 @@
 
 
     <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimaryDark"
-            android:elevation="8dp"
-            app:title="@string/app_recipes"
-            app:titleTextColor="@color/colorWhite" />
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="8dp"
+        app:title="@string/app_recipes"
+        app:titleTextColor="@color/colorWhite" />
 
     <android.support.v7.widget.RecyclerView
-            android:id="@+id/rv_recipes"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbars="vertical"
-            android:layout_below="@id/toolbar"
-            android:layout_margin="16dp"/>
+        android:id="@+id/rv_recipes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_margin="16dp"
+        android:scrollbars="vertical" />
 
 </RelativeLayout>
 

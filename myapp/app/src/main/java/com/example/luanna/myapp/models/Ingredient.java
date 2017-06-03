@@ -2,11 +2,11 @@ package com.example.luanna.myapp.models;
 
 import android.support.v7.app.AppCompatActivity;
 
-/**
- * Created by Luanna on 27/05/2017.
- */
-
+///Created by Luanna on 27/05/2017.
+ 
 public class Ingredient extends AppCompatActivity {
+
+    //definindo atributos do ingrediente
     private String name;
     private Integer quantity;
     private Double price;
@@ -17,6 +17,7 @@ public class Ingredient extends AppCompatActivity {
         this.price= price;
     }
 
+    //Getters e Setters
     public String getName() {
         return name;
     }

@@ -13,9 +13,8 @@ import com.example.luanna.myapp.utils.Cons;
 
 import java.util.List;
 
-//
-//Ceated by Luanna on 25/05/2017.
 
+//Ceated by Luanna on 25/05/2017.
 
 
 public class OpenRecipe extends AppCompatActivity {
@@ -41,6 +40,7 @@ public class OpenRecipe extends AppCompatActivity {
 
     }
 
+    //ligando os objetos nos ids
     public void findViews() {
         name = (TextView) findViewById(R.id.recipe_name);
         portion = (TextView) findViewById(R.id.r_portion);
@@ -53,6 +53,7 @@ public class OpenRecipe extends AppCompatActivity {
 
     }
 
+    //pegando as informações da Receita por parâmetro 
     public void setInfo(Recipe recipe) {
         name.setText(recipe.getName());
         portion.setText(String.valueOf(recipe.getPortion()));

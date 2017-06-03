@@ -2,7 +2,6 @@ package com.example.luanna.myapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
@@ -14,9 +13,8 @@ import com.example.luanna.myapp.utils.Cons;
 
 import java.util.List;
 
-/**
- * Created by Luanna on 24/05/2017.
- */
+//Created by Luanna on 24/05/2017.
+
 
 public class Recipes extends AppCompatActivity {
     private RecyclerView rvRecipes;
@@ -42,13 +40,13 @@ public class Recipes extends AppCompatActivity {
         StaggeredGridLayoutManager mLayout = new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
         rvRecipes.setLayoutManager(mLayout);
 
-        // Pega a lista de dados, e coloca para tela
+        // o adapter recebe a lista de dados
         final RecipesAdapter recipesAdapter = new RecipesAdapter(recipes, Recipes.this);
         recipesAdapter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int position = rvRecipes.getChildLayoutPosition(view);
-                goToRecipe(position);
+                goToRecipe(position); //identifica qual objeto foi selecionado
             }
         });
 
@@ -56,7 +54,7 @@ public class Recipes extends AppCompatActivity {
     }
 
     private void goToRecipe(Integer position){
-        Intent intent = new Intent(Recipes.this, OpenRecipe.class);
+        Intent intent = new Intent(Recipes.this, OpenRecipe.class); // chama a OpenRecipe
         intent.putExtra("position", position);
         startActivity(intent);
     }

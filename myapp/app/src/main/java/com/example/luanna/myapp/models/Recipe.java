@@ -1,21 +1,20 @@
 package com.example.luanna.myapp.models;
 
-import java.io.Serializable;
 import java.util.List;
 
-/**
- * Created by Luanna on 24/05/2017.
- */
+// Created by Luanna on 24/05/2017.
 
 public class Recipe {
 
-    //private String urlPhoto;
+    //atributos da receita nome, tempo, lucro, lucro líquido, preço de venda
+    //  porção da receita, lista de ingredientes de cada receita 
     private String name;
     private String time;
     private Double profit, revenue, netProfit, priceSell;
     private Integer portion;
     private List<RecipeIngredient> recipeIngredients;
 
+    // Define o modelo da classe
     public Recipe(String name, String time, Integer portion, List<RecipeIngredient> recipeIngredients) {
         this.name = name;
         this.time = time;
@@ -30,37 +29,43 @@ public class Recipe {
     public Recipe() {
     }
 
+    //Getters and Setters
 
+    // Multiplica o número de unidades que a receita rende pelo preço de venda
     public Double getRevenue() {
-        return getPriceSell()*getPortion();
+        return getPriceSell() * getPortion();
     }
 
-    public Double getNetProfit(){
-        Double sum = 0.0 ;
+    // Calcula o Lucro líquido da receita
+    // Pega a somatória dos preços dos ingredientes na receita 
+    // Subitrai do valor de Faturamento Total 
+    public Double getNetProfit() {
+        Double sum = 0.0;
         for (RecipeIngredient recipeIngredient : recipeIngredients) {
             sum += recipeIngredient.getRecipeIngredientPrice();
         }
         return revenue - sum;
     }
 
-    public void setRevenue(Double revenue) {
-        this.revenue = revenue;
-    }
-
-    public void setNetProfit(Double netProfit) {
-        this.netProfit = netProfit;
-    }
-
-    public Double getPriceSell() {
-        return priceSell;
+    //Mostra o lucro em porcentagem
+    public Double getProfit() {
+        return (netProfit / revenue) * 100;
     }
 
     public void setPriceSell(Double priceSell) {
         this.priceSell = priceSell;
     }
 
-    public Double getProfit() {
-        return (revenue / netProfit - 1) * 100;
+    public void setNetProfit(Double netProfit) {
+        this.netProfit = netProfit;
+    }
+
+    public void setRevenue(Double revenue) {
+        this.revenue = revenue;
+    }
+
+    public Double getPriceSell() {
+        return priceSell;
     }
 
     public String getName() {

@@ -6,7 +6,6 @@
     <string name="quantity">Quantidade</string>
     <string name="price">Preço</string>
     <string name="name_recipe">Nome da Receita</string>
-    <string name="prepare_method">Modo de preparo</string>
     <string name="portion">porções</string>
     <string name="profit">lucro</string>
     <string name="price_sell">Preço para Venda (unidade)</string>

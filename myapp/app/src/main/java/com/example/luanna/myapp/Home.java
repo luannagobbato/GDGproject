@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 public class Home extends AppCompatActivity {
+    //declarando variáveis para linkar com os botões
     private ImageButton btnRecipes;
     private ImageButton btnIngredients;
 
@@ -19,11 +20,13 @@ public class Home extends AppCompatActivity {
         setActions();
     }
 
+    //função que liga os objetos com as views no xml
     private void findViews() {
         btnRecipes = (ImageButton) findViewById(R.id.btn_recipes);
         btnIngredients = (ImageButton) findViewById(R.id.btn_ingredients);
     }
 
+    //definindo ação para os botões quando clicados 
     private void setActions() {
         btnRecipes.setOnClickListener(new View.OnClickListener() {
             @Override

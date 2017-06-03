@@ -26,6 +26,7 @@ public class IngredientsAdapter extends RecyclerView.Adapter<IngredientsAdapter.
 
     }
 
+    //função liga os objetos com as views no xml
     static class ViewHolder extends RecyclerView.ViewHolder {
         TextView nameIngredient, priceIngredient, quantityIngredient;
 
