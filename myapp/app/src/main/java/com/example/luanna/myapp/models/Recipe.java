@@ -13,21 +13,52 @@ public class Recipe {
     private String name;
     private String pepareMethod;
     private String time;
-    private Double profit;
+    private Double profit, revenue, netProfit, priceSell;
     private Integer portion;
     private List<RecipeIngredient> recipeIngredients;
-
 
     public Recipe(String name, String pepareMethod, String time, Double profit, Integer portion, List<RecipeIngredient> recipeIngredients) {
         this.name = name;
         this.pepareMethod = pepareMethod;
         this.time = time;
         this.profit = profit;
+        this.priceSell = 3.50;
         this.portion = portion;
         this.recipeIngredients = recipeIngredients;
+        this.revenue = getRevenue();
+        this.netProfit = getNetProfit();
     }
 
     public Recipe() {
+    }
+
+
+    public Double getRevenue() {
+        return getPriceSell()*getPortion();
+    }
+
+    public Double getNetProfit(){
+        Double sum = 0.0 ;
+        for (RecipeIngredient recipeIngredient : recipeIngredients) {
+            sum += recipeIngredient.getRecipeIngredientPrice();
+        }
+        return revenue - sum;
+    }
+
+    public void setRevenue(Double revenue) {
+        this.revenue = revenue;
+    }
+
+    public void setNetProfit(Double netProfit) {
+        this.netProfit = netProfit;
+    }
+
+    public Double getPriceSell() {
+        return priceSell;
+    }
+
+    public void setPriceSell(Double priceSell) {
+        this.priceSell = priceSell;
     }
 
     public String getName() {

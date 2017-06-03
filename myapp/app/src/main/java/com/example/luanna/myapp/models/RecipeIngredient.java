@@ -18,6 +18,11 @@ public class RecipeIngredient {
     public RecipeIngredient() {
     }
 
+    public Double getRecipeIngredientPrice(){
+        Ingredient ingredient = getRecipeIngredient();
+        return (ingredientQuantity * ingredient.getPrice())/ ingredient.getQuantity();
+    }
+
     public Ingredient getRecipeIngredient() {
         return recipeIngredient;
     }

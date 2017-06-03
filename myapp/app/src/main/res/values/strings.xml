@@ -25,4 +25,6 @@ Depois de esfriar, desenforme o bolo.
 Utilize uma faquinha para passar ao redor do bolo e levantá-lo um pouco.
 Vire a forma em cima de um prato grande e desvire novamente o bolo.
     </string>
+    <string name="revenue">Faturamento Bruto</string>
+    <string name="netprofit">Lucro Líquido</string>
 </resources>

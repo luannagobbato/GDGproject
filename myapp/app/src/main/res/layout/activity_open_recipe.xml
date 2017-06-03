@@ -165,23 +165,23 @@
                         android:layout_weight="1"
                         android:text="@string/price_sell"
                         android:textAlignment="center"
-                        android:textSize="16dp" />
+                        android:textSize="14dp" />
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Faturamento"
+                        android:text="@string/revenue"
                         android:textAlignment="center"
-                        android:textSize="16dp" />
+                        android:textSize="14dp" />
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Lucro Total"
+                        android:text="@string/netprofit"
                         android:textAlignment="center"
-                        android:textSize="16dp" />
+                        android:textSize="14dp" />
 
 
                 </LinearLayout>
@@ -193,7 +193,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-
+                        android:id="@+id/r_price_sell"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -202,7 +202,7 @@
                         android:textSize="16dp" />
 
                     <TextView
-
+                        android:id="@+id/r_revenue"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -211,7 +211,7 @@
                         android:textSize="16dp" />
 
                     <TextView
-
+                        android:id="@+id/r_net_profit"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"

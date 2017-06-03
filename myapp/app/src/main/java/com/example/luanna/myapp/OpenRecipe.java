@@ -19,7 +19,7 @@ import java.util.List;
 
 
 public class OpenRecipe extends AppCompatActivity {
-    private TextView portion, profit, time, name;
+    private TextView portion, profit, time, name, priceSell, revenue, netProfit;
     private RecyclerView rvRecipeIngredients;
     private List<RecipeIngredient> recipeIngredients;
 
@@ -45,14 +45,21 @@ public class OpenRecipe extends AppCompatActivity {
         name = (TextView) findViewById(R.id.recipe_name);
         portion = (TextView) findViewById(R.id.r_portion);
         profit = (TextView) findViewById(R.id.r_profit);
+        priceSell = (TextView) findViewById(R.id.r_price_sell);
+        revenue = (TextView) findViewById(R.id.r_revenue);
+        netProfit = (TextView) findViewById(R.id.r_net_profit);
         time = (TextView) findViewById(R.id.r_time);
         rvRecipeIngredients = (RecyclerView) findViewById(R.id.rv_recipe_ingredients);
+
     }
 
     public void setInfo(Recipe recipe) {
         name.setText(recipe.getName());
         portion.setText(String.valueOf(recipe.getPortion()));
         profit.setText(String.valueOf(recipe.getProfit()));
+        priceSell.setText(String.valueOf(recipe.getPriceSell()));
+        revenue.setText(String.valueOf(recipe.getRevenue()));
+        netProfit.setText(String.valueOf(recipe.getNetProfit()));
         time.setText(recipe.getTime());
     }
 
