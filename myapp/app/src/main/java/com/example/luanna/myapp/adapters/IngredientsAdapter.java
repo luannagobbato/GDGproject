@@ -52,7 +52,7 @@ public class IngredientsAdapter extends RecyclerView.Adapter<IngredientsAdapter.
     public void onBindViewHolder(ViewHolder holder, int position) {
         Ingredient batman = ingredients.get(position);
         holder.nameIngredient.setText(batman.getName());
-        holder.priceIngredient.setText(String.valueOf(batman.getPrice()));
+        holder.priceIngredient.setText("R$" + String.format("%.2f", batman.getPrice()));
         holder.quantityIngredient.setText(String.valueOf(batman.getQuantity()));
     }
 
