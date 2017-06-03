@@ -20,16 +20,6 @@
             app:title="@string/app_ingredients"
             app:titleTextColor="@color/colorWhite" />
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/btn_add_ingredient"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:clickable="true"
-            app:fabSize="normal"
-            app:useCompatPadding="true" />
-
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_ingredients"
             android:layout_width="match_parent"

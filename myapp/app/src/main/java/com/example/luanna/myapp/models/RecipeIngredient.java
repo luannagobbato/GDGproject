@@ -2,9 +2,6 @@ package com.example.luanna.myapp.models;
 
 // Created by Luanna on 02/06/2017.
 
-
-import java.util.List;
-
 public class RecipeIngredient {
 
     private Ingredient recipeIngredient;

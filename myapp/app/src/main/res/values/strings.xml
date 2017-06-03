@@ -10,21 +10,6 @@
     <string name="portion">porções</string>
     <string name="profit">lucro</string>
     <string name="price_sell">Preço para Venda (unidade)</string>
-    <string name="prepare_method_example">Unte uma assadeira média com óleo e jogue um pouco de farinha de trigo espalhando por toda a superfície e laterais.
-Retire os excessos de farinha da assadeira.
-Separe as gemas das claras e bata as claras em ponto de neve na batedeira em velocidade alta por 5 minutos
-Pegue uma panela pequena e misture o chocolate em pó com água e leve ao fogo até ferver.
-Em uma tigela bata bem o açúcar com as gemas até ficar cremoso.
-Adicione óleo e continue a bater. Junte a calda ainda quente de chocolate e misture bem.
-Acrescente farinha aos poucos mexendo sempre para ficar homogêneo.
-Para evitar pequenas bolinhas na mistura, peneire juntos, com um coador pequeno, o fermento em pó e o bicarbonato de sódio por cima da massa e misture bem.
-Junte delicadamente as claras batidas em neve até ficar uma massa cremosa e uniforme. Vire a massa na assadeira previamente untada.
-Ponha para assar em forno médio por aproximadamente 40 minutos.
-O tempo de assar pode variar um pouco de acordo com o forno e a assadeira.
-Depois de esfriar, desenforme o bolo.
-Utilize uma faquinha para passar ao redor do bolo e levantá-lo um pouco.
-Vire a forma em cima de um prato grande e desvire novamente o bolo.
-    </string>
     <string name="revenue">Faturamento Bruto</string>
     <string name="netprofit">Lucro Líquido</string>
 </resources>

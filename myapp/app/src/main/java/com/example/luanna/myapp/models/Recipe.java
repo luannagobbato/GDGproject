@@ -11,15 +11,13 @@ public class Recipe {
 
     //private String urlPhoto;
     private String name;
-    private String pepareMethod;
     private String time;
     private Double profit, revenue, netProfit, priceSell;
     private Integer portion;
     private List<RecipeIngredient> recipeIngredients;
 
-    public Recipe(String name, String pepareMethod, String time, Integer portion, List<RecipeIngredient> recipeIngredients) {
+    public Recipe(String name, String time, Integer portion, List<RecipeIngredient> recipeIngredients) {
         this.name = name;
-        this.pepareMethod = pepareMethod;
         this.time = time;
         this.priceSell = 3.50;
         this.portion = portion;
@@ -71,14 +69,6 @@ public class Recipe {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getPepareMethod() {
-        return pepareMethod;
-    }
-
-    public void setPepareMethod(String pepareMethod) {
-        this.pepareMethod = pepareMethod;
     }
 
     public String getTime() {

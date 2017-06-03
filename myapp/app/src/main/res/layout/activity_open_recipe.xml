@@ -25,6 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/toolbar"
+            android:layout_marginBottom="16dp"
             android:fitsSystemWindows="true">
 
             <LinearLayout
@@ -219,12 +220,6 @@
                         android:textAlignment="center"
                         android:textSize="16dp" />
                 </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:text="@string/prepare_method_example" />
 
             </LinearLayout>
 

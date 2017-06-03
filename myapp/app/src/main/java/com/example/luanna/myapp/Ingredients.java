@@ -30,19 +30,12 @@ public class Ingredients extends AppCompatActivity {
 
         ingredients = Cons.getIngredients();
         findViews();
-//        setToolbar();
         setRecyclerView();
     }
 
     private void findViews(){
-//        toolbar = (Toolbar) findViewById(R.id.toolbar);
         rvIngredients = (RecyclerView) findViewById(R.id.rv_ingredients);
-        addIngredient = (FloatingActionButton) findViewById(R.id.btn_add_ingredient);
        }
-
-//    private void setToolbar() {
-//        setSupportActionBar(toolbar);
-//    }
 
 
     private void setRecyclerView(){

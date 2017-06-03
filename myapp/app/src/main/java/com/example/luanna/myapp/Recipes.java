@@ -20,7 +20,6 @@ import java.util.List;
 
 public class Recipes extends AppCompatActivity {
     private RecyclerView rvRecipes;
-    private FloatingActionButton addRecipe;
     private List<Recipe> recipes;
 
 
@@ -31,13 +30,11 @@ public class Recipes extends AppCompatActivity {
 
         recipes = Cons.getRecipes();
         findViews();
-//        setToolbar();
         setRecyclerView();
     }
 
     private void findViews() {
         rvRecipes = (RecyclerView) findViewById(R.id.rv_recipes);
-        addRecipe = (FloatingActionButton) findViewById(R.id.btn_add_recipe);
     }
 
     private void setRecyclerView() {
